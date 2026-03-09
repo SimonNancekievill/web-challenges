@@ -86,6 +86,11 @@ aside .location {
 ul .bio {
   display: none;
 }
+
+ul .location {
+  text-align: start;
+  color: darkslategray;
+}
 /*
   Part 1
 
