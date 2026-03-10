@@ -34,8 +34,11 @@ h2 {
 }
 
 .tech-stack__list {
+  display: flex;
   list-style: none;
   padding-left: 0;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tech-stack__list-item {
