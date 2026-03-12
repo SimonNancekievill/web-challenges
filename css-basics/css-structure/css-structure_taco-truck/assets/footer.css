@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--footer-bg);
+  padding: 20px;
+}
+
+.footer-text {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: smaller;
+}
