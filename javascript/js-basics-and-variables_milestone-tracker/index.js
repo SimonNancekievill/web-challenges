@@ -20,3 +20,16 @@ Hint: You can combine text and variables using the `+` operator.
 const yearsPracticing = Number(process.argv[2]); // This takes the `<years>` entered in the command `node index.js <years>`.
 
 console.log("You've been practicing for: " + yearsPracticing + " years");
+
+const daysSum = 356 * yearsPracticing;
+console.log("You´ve been practicing for " + daysSum + " days. Good Job!");
+
+const milestone = (365 * 10) / yearsPracticing;
+console.log(
+  "You´ve " + milestone + " days left until you reach you 10 Year Milestone.",
+);
+
+const percentage = (daysSum * 100) / (356 * 10);
+console.log("You have " + percentage + "% done of your milestone.");
+
+const cumulative = 
