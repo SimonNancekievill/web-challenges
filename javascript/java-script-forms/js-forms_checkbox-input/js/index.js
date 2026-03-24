@@ -16,6 +16,13 @@ function showTosError() {
 function showFormSuccess() {
   formSuccess.removeAttribute("hidden");
 }
+function hideFormSuccess() {
+  formSuccess.setAttribute("hidden", "");
+}
+
+hideTosError();
+hideFormSuccess();
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -25,7 +32,6 @@ form.addEventListener("submit", (event) => {
     hideTosError();
     showFormSuccess();
   } else {
-    alert("To continue, please accept our Terms of Service!");
     showTosError();
   }
 

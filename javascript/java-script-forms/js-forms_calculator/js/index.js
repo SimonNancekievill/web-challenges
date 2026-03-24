@@ -22,6 +22,10 @@ function divide(a, b) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  const formElements = event.target.elements;
+  const addition = formElements.numberA.value + formElements.numberB.value;
+  console.log(addition);
+  // const addition = event.target.element.
   let result;
 
   // --v-- write your code here --v--
