@@ -24,7 +24,10 @@ const cards = [
   },
 ];
 
-const lowerCaseAnswers = null; // ['as often as you like.', ...]
+const lowerCaseAnswers = cards.map((answer) => {
+  return answer.toLowerCase;
+}); // ['as often as you like.', ...]
+console.log(lowerCaseAnswers);
 
 const questionsAndAnswersTogether = null; // ["How often can I use <header>? - As often as you like.", ...]
 
