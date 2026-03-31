@@ -1,5 +1,5 @@
 import { Card } from "../Card/Card.js";
-import { cards } from "../App/App.js";
+import { cards } from "../../lib/cards.js";
 export function Form() {
   const form = document.createElement("form");
   form.classList.add("form");
