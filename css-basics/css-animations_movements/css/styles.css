@@ -109,4 +109,10 @@ The button that you are working with as an id attribute set in  #hoverButton*/
   /* Write here your solution */
   /* Hides it initially to the right */
   /* Smooth slide transition */
+  transform: translateX(300px);
+  transition: transform 1s ease-in-out;
+}
+
+.slideInBox.active {
+  transform: translateX(0px);
 }

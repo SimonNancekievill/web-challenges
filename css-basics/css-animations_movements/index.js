@@ -13,8 +13,6 @@ changeColorButton.addEventListener("click", () => {
     currentColorIndex = 0;
   }
   colorChangeCard.style.backgroundColor = colors[currentColorIndex];
-
-  console.log(currentColorIndex);
 });
 
 /*  -----------------------------------------------------------
@@ -61,4 +59,5 @@ const slideInBox = document.querySelector("[data-js=slideInBox]");
 
 slideInButton.addEventListener("click", () => {
   // Add your solution below
+  slideInBox.classList.toggle("active");
 });
