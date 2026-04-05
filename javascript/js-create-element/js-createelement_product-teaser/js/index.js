@@ -1,5 +1,3 @@
-// const { createElement } = require("react");
-
 console.clear();
 
 const name = "Queen angelfish";
