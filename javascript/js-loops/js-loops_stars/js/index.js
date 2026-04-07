@@ -7,9 +7,14 @@ function renderStars() {
   starContainer.innerHTML = "";
 
   // --v-- write or modify code below this line --v--
-  for (){}; 
+  for (let i = 1; i <= 5; i++) {
+    console.log(i);
+    const star = document.createElement("img");
+    star.src = "assets/star-empty.svg";
+
+    starContainer.append(star);
+  }
   // --^-- write or modify code above this line --^--
 }
 
 renderStars();
-s
