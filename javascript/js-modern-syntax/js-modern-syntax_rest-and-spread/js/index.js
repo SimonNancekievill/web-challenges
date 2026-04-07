@@ -36,6 +36,7 @@ d) Note that the optional chaining `?.` is used to prevent an error from occurin
 */
 
 function add(...allNumbers) {
+  console.log(allNumbers);
   return allNumbers.reduce?.((a, b) => a + b);
 }
 
