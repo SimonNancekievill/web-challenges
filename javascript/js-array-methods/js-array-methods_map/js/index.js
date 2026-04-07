@@ -29,12 +29,11 @@ const lowerCaseAnswers = cards.map((card) => {
 }); // ['as often as you like.', ...]
 // console.log(lowerCaseAnswers);
 const questionsAndAnswersTogether = cards.map((card) => {
-  const questionsAndAnswersTogether2 = `${card.question} - ${card.answer}`;
-  // const question = card.question;
-  // const answer = card.answer;
-  return questionsAndAnswersTogether2;
+  return `${card.question} - ${card.answer}`;
 }); // ["How often can I use <header>? - As often as you like.", ...]
 console.log(questionsAndAnswersTogether);
-const questionAndAnswer = null; // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
-
+const questionAndAnswer = cards.map((card) => {
+  return { question: card.question, answer: card.answer };
+}); // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
+console.log(questionAndAnswer);
 export { lowerCaseAnswers, questionsAndAnswersTogether, questionAndAnswer };
