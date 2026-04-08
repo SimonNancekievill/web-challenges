@@ -78,9 +78,15 @@ const animals = [
 ];
 
 // Hint: Besides the array method, check out the string method `startsWith()`.
-const firstAnimalStartingWithLetterG = null;
+const firstAnimalStartingWithLetterG = animals.find((animal) =>
+  animal.name.startsWith("g"),
+);
+console.log(firstAnimalStartingWithLetterG);
 
-const indexOfAnimalWithNameLongerFive = null;
+const indexOfAnimalWithNameLongerFive = animals.indexOf(
+  (animal) => animal.name.length,
+);
+console.log(indexOfAnimalWithNameLongerFive);
 
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
