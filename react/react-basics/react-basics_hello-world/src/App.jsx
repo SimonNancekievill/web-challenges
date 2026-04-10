@@ -5,5 +5,5 @@ export default function App() {
 }
 
 function HelloWorld() {
-  return <h1>Hello world!</h1>;
+  return <h1>Hello Dolphins!</h1>;
 }
