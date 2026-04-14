@@ -46,15 +46,19 @@ export default function EntriesSection() {
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map((entry) => (
-          <li key={entry.id}>
-            <Entry
-              name={entry.name}
-              date={entry.date}
-              notes={entry.notes}
-              motto={entry.motto}
-            />
-          </li>
+        {entries.map((entry, index) => (
+          <>
+            {index !== 0 ? <Divider /> : null}
+
+            <article key={entry.id}>
+              <Entry
+                name={entry.name}
+                date={entry.date}
+                notes={entry.notes}
+                motto={entry.motto}
+              />
+            </article>
+          </>
         ))}
         {/* <Entry
           date="Feb 27, 2028"
