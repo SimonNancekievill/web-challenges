@@ -30,22 +30,29 @@ const animals = [
 const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
 
 export default function App() {
-  const [habitat, setHabitat] = useState("");
-  function handleSetHabitat() {
-    console.log(`Hallo ${habitat}`);
-    setHabitat(habitat);
+  const [selectedHabitat, setSelectedHabitat] = useState("");
+
+  function handleSelectedHabitat(habitat) {
+    setSelectedHabitat(habitat);
+    console.log(selectedHabitat);
   }
 
   return (
-    <>
+    <main>
       <h1>Animal Filter</h1>
       {habitats.map((habitat) => (
-        <li key={habitat}>
-          <button className="button" onClick={handleSetHabitat}>
-            {habitat}
-          </button>
-        </li>
+        <button
+          key={habitat}
+          className="button"
+          type="button"
+          onClick={handleSelectedHabitat}
+        >
+          {habitat}
+        </button>
       ))}
-    </>
+      {animals.filter((animal) {
+        
+      })}
+    </main>
   );
 }
