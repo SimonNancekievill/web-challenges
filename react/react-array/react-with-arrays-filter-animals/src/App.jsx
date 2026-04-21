@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
 const animals = [
@@ -30,35 +30,5 @@ const animals = [
 const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
 
 export default function App() {
-  const [selectedHabitat, setSelectedHabitat] = useState("");
-
-  const filteredAnimals = animals.filter(
-    (animal) => animal.habitat === selectedHabitat,
-  );
-
-  return (
-    <main>
-      <h1>Animal Filter</h1>
-      {habitats.map((habitat) => (
-        <button
-          type="button"
-          key={habitat}
-          className="button"
-          onClick={() => setSelectedHabitat(habitat)}
-        >
-          {habitat}
-        </button>
-      ))}
-      <ul>
-        {filteredAnimals.filter((animal) => {
-          <li key={animal.id}>
-            {animal.name}{" "}
-            <span role="img" aria-label={`${animal.name} emoji`}>
-              {animal.emoji}
-            </span>
-          </li>;
-        })}
-      </ul>
-    </main>
-  );
+  return <h1>Animal Filter</h1>;
 }
