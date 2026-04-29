@@ -31,6 +31,41 @@ const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
 
 export default function App() {
   const [selectedHabitat, setSelectedHabitat] = useState("");
+  // setSelectedHabitat shoud look into the animals array and select all animals that match the habitat.//
 
-  return <h1>Animal Filter</h1>;
+  const filteredAnimals = animals.filter(
+    (animal) => selectedHabitat === "" || animal.habitat === selectedHabitat,
+  );
+
+  return (
+    <>
+      <h1>Animal Filter</h1>
+      {habitats.map((habitat) => (
+        <button
+          className="button"
+          type="button"
+          key={habitat}
+          onClick={() => {
+            setSelectedHabitat(habitat);
+          }}
+        >
+          {habitat}
+        </button>
+      ))}
+      <button
+        className="button"
+        type="button"
+        onClick={() => setSelectedHabitat("")}
+      >
+        All
+      </button>
+      <ul>
+        {filteredAnimals.map((filteredAnimal) => (
+          <li key={filteredAnimal.id}>
+            {filteredAnimal.name} {filteredAnimal.emoji}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
