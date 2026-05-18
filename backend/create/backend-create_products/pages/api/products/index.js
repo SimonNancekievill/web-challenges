@@ -10,6 +10,12 @@ export default async function handler(request, response) {
     response.status(200).json(products);
     return;
   }
+  if (request.method === "POST") {
+    const productData = request.body;
+    await Product.create(productData);
+
+    response.status(201).json({ status: "Product created." });
+  }
 
   response.status(405).json({ status: "Method not allowed." });
 }
