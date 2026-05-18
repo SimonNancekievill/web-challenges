@@ -5,7 +5,7 @@ export default function Comments({ reviews }) {
       <ul>
         {reviews.map((review) => (
           <li key={review._id}>
-            <p>
+            <p key={review._id}>
               {review.rating}/5: {review.text}
             </p>
           </li>
