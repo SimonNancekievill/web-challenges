@@ -17,7 +17,6 @@ export default function Product() {
 
     const formData = new FormData(event.target);
     const productData = Object.fromEntries(formData);
-    console.log(productData);
 
     const response = await fetch(`/api/products/${id}`, {
       method: "PUT",
@@ -26,6 +25,16 @@ export default function Product() {
     });
     if (response.ok) {
       mutate();
+    }
+  }
+
+  async function handleDeleteProduct(event) {
+    const response = await fetch(`/api/products/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      router.push("/");
     }
   }
   if (isLoading) {
@@ -54,7 +63,7 @@ export default function Product() {
             ✏️
           </span>
         </button>
-        <button>
+        <button type="button" onClick={() => handleDeleteProduct(id)}>
           <span role="img" aria-label="A cross indicating deletion">
             ❌
           </span>
