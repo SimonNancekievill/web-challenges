@@ -5,7 +5,6 @@ export default function ProductForm({ onSubmit, value, isEditMode }) {
   return (
     <StyledForm onSubmit={onSubmit}>
       <StyledHeading>
-        {" "}
         {isEditMode ? "Edit Fish" : "Add a new Fish"}
       </StyledHeading>
       <StyledLabel htmlFor="name">
